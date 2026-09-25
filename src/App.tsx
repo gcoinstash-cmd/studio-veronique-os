@@ -27,7 +27,7 @@ const SafeImage = forwardRef<HTMLImageElement, SafeImageProps>(
       return (
         <div className={`w-full h-full flex flex-col items-center justify-center p-6 text-center ${fallbackColor} ${className}`} style={{ minHeight: '150px' }}>
           <span className="font-serif italic text-base text-brand-charcoal/60 mb-2">{alt || "Studio Véronique"}</span>
-          <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-charcoal/40">[ Image Unavailable ]</span>
+          <span className="font-sans text-xs font-semibold tracking-wider tracking-[0.2em] uppercase text-brand-charcoal/40">[ Image Unavailable ]</span>
         </div>
       );
     }
@@ -64,7 +64,7 @@ const Navbar = ({ onOpenAdmin }: { onOpenAdmin: () => void }) => {
       <header className="sticky top-0 z-[100] bg-brand-cream/80 backdrop-blur-md py-6 border-b border-brand-charcoal/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative">
           <div className="text-lg sm:text-xl md:text-base lg:text-xl xl:text-2xl font-serif tracking-widest uppercase font-medium text-brand-charcoal">
-            STUDIO VÉRONIQUE <span className="text-xs md:text-[10px] lg:text-sm font-sans tracking-normal opacity-50 ml-1">/ LA</span>
+            STUDIO VÉRONIQUE <span className="text-xs md:text-xs font-semibold tracking-wider lg:text-sm font-sans tracking-normal opacity-50 ml-1">/ LA</span>
           </div>
 
           {/* Desktop Links */}
@@ -82,7 +82,7 @@ const Navbar = ({ onOpenAdmin }: { onOpenAdmin: () => void }) => {
             <button
               type="button"
               onClick={onOpenAdmin}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-brand-charcoal/5 border border-brand-charcoal/20 text-brand-charcoal font-mono text-[10px] uppercase tracking-widest hover:bg-brand-charcoal hover:text-brand-cream transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-brand-charcoal/5 border border-brand-charcoal/20 text-brand-charcoal font-mono text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase tracking-widest hover:bg-brand-charcoal hover:text-brand-cream transition-all"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-brand-terracotta" />
               [ ATELIER PASS ]
@@ -203,7 +203,7 @@ const Hero = () => (
         className="flex flex-col items-center gap-4"
       >
         <div className="w-px h-24 bg-brand-charcoal/20"></div>
-        <span className="text-[10px] uppercase tracking-[0.3em] vertical-rl opacity-50">Scroll</span>
+        <span className="text-xs font-semibold tracking-wider uppercase tracking-[0.3em] vertical-rl opacity-50">Scroll</span>
       </motion.div>
     </div>
   </section>
@@ -482,7 +482,7 @@ const Inquiry = () => {
                 <div className="relative group">
                   <textarea id="message" rows={4} placeholder="Tell us about your space" className="w-full bg-transparent border-b border-brand-charcoal/20 py-4 focus:border-brand-terracotta outline-none transition-colors resize-none"></textarea>
                 </div>
-                <button type="submit" className="group relative w-full bg-brand-charcoal text-brand-cream py-6 uppercase tracking-[0.3em] text-xs font-medium overflow-hidden transition-all duration-500">
+                <button type="submit" className="group relative w-full bg-brand-charcoal text-brand-cream py-6 uppercase tracking-[0.3em] text-base font-semibold min-h-[44px] font-medium overflow-hidden transition-all duration-500">
                   <span className="relative z-10">Submit Inquiry</span>
                   <div className="absolute inset-0 bg-brand-terracotta translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
                 </button>
@@ -532,11 +532,11 @@ const Footer = () => (
         <a href="#" aria-label="Instagram" className="opacity-50 hover:opacity-100 hover:text-brand-terracotta transition-all duration-300 transform hover:-translate-y-1"><Instagram size={20} /></a>
         <a href="#" aria-label="Pinterest" className="opacity-50 hover:opacity-100 hover:text-brand-terracotta transition-all duration-300 transform hover:-translate-y-1"><Pinterest size={20} /></a>
         {['Philosophy', 'Privacy Policy'].map(item => (
-          <a key={item} href={item === 'Philosophy' ? '#philosophy' : '#'} className="hidden sm:inline-block text-[10px] uppercase tracking-widest opacity-50 hover:opacity-100 transition-opacity">{item}</a>
+          <a key={item} href={item === 'Philosophy' ? '#philosophy' : '#'} className="hidden sm:inline-block text-xs font-semibold tracking-wider uppercase tracking-widest opacity-50 hover:opacity-100 transition-opacity">{item}</a>
         ))}
       </div>
 
-      <div className="text-[10px] uppercase tracking-widest opacity-35">
+      <div className="text-xs font-semibold tracking-wider uppercase tracking-widest opacity-35">
         © 2026 STUDIO VÉRONIQUE. ALL RIGHTS RESERVED.
       </div>
     </div>
